@@ -1,12 +1,22 @@
 module.exports = {
+    env: {
+        browser: true,
+        amd: true,
+        node: true,
+    },
+    parser: 'babel-eslint',
+    settings: {
+        react: { version: 'detect' },
+    },
     root: true,
-    plugins: ['@typescript-eslint'],
+    plugins: ['prettier', 'react'],
     extends: [
         'eslint:recommended',
         'plugin:react/recommended',
         'plugin:prettier/recommended',
     ],
     rules: {
+        'react/react-in-jsx-scope': 0,
         'lines-between-class-members': [
             'error',
             'always',
