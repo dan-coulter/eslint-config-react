@@ -1,0 +1,39 @@
+{
+    "name": "@dan-coulter/eslint-config-react",
+    "version": "1.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/dan-coulter/eslint-config-react.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/dan-coulter/eslint-config-react/issues"
+    },
+    "homepage": "https://github.com/dan-coulter/eslint-config-react#readme",
+    "devDependencies": {
+        "@dan-coulter/prettier-config": "^1.0.0",
+        "eslint-plugin-prettier": "^3.2.0",
+        "eslint-plugin-react": "^7.21.5",
+        "husky": "4.2.5",
+        "lint-staged": "^10.2.13",
+        "prettier": "^2.1.1"
+    },
+    "peerDependencies": {
+        "eslint": "^7.7.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,css,md}": "prettier --write"
+    }
+}
